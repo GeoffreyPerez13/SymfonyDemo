@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails du produit{% endblock %}
+
+{% block body %}
+<h2>{{ product.name }}</h2>
+<p>{{ product.price }}</p>
+<p>{{ product.description }}</p>
+<img src="{{ product.picture }}" alt="Image du produit">
+{% endblock %}

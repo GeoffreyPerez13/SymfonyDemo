@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration - Gestion des produits{% endblock %}
+
+{% block body %}
+<h1>Liste des produits</h1>
+
+<a class="btn btn-primary" href="{{ path('app_admin_product_add') }}">Ajouter un produit</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
