@@ -117,5 +117,5 @@ class Category
         }
 
         return $this;
-    }
+    }   
 }

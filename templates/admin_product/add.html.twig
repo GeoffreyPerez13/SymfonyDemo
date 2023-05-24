@@ -28,10 +28,24 @@
     </div>
 
     <div class="mb-3">
-        {{ form_label(form.picture, 'Image URL', {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_label(form.picture, 'Image', {'label_attr': {'class': 'form-label'}}) }}
         {{ form_widget(form.picture, {'attr': {'class': 'form-control', 'placeholder': 'Entrez l\'URL de l\'image'}}) }}
         {{ form_errors(form.picture) }}
     </div>
+
+    <div class="mb-3 form-inline">
+        {{ form_label(form.createdAt, 'Date de création', {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_widget(form.createdAt, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.createdAt) }}
+    </div>
+
+    <div class="mb-3">
+        {{ form_label(form.categoryId, 'Catégorie', {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_widget(form.categoryId, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.categoryId) }}
+    </div>
+
+    <button type="submit" class="btn btn-info">Ajouter le produit</button>
 
     {{ form_end(form) }}
 </div>
