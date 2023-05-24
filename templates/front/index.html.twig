@@ -5,9 +5,10 @@
 {% block body %}
 <p>{{ date |date("d/m/Y") }}</p>
 
-<div class="row">
-    {% for product in products %}
-    {{ include('front/_product.html.twig ')}}
-    {% endfor %}
-</div>
+{% for product in products %}
+<h2>{{ product.name }}</h2>
+<p>{{ product.price }}</p>
+<p>Catégorie : {{ product.categoryId.name }}</p> <!-- Ajout de cette ligne -->
+<a class="btn btn-info" href="{{ path('app_product_detail', {slug: product.slug}) }}">Voir les détails</a>
+{% endfor %}
 {% endblock %}

@@ -4,7 +4,6 @@
 
 {% block body %}
 <h2>{{ category.name }}</h2>
-<p>{{ product.price }}</p>
-<p>{{ product.description }}</p>
-<img src="{{ product.picture }}" alt="Image du produit">
+<p>{{ category.description }}</p>
+<img src="{{ category.picture }}" alt="Image du produit">
 {% endblock %}

@@ -6,6 +6,6 @@
 
 {% for categorie in categories %}
 <h2>{{ categorie.name }}</h2>
-<a class="btn btn-info" href="">Voir les détails</a>
+<a class="btn btn-info" href="{{ path('app_category_detail', {slug: categorie.slug}) }}">Voir les détails</a>
 {% endfor %}
 {% endblock %}

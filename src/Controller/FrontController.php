@@ -52,7 +52,7 @@ class FrontController extends AbstractController
         ]);
     }
 
-    #[Route('/category/{slug}', name: 'app_category_detail')]
+    #[Route('/categories/{slug}', name: 'app_category_detail')]
     public function categoryDetail(Category $category = null): Response
     {
         if ($category === null) {
